@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alexey Tumanov  ||  Systems for AI Lab (SAIL) | Systems for AI Lab</title>
+    <link>/author/alexey-tumanov-systems-for-ai-lab-sail/</link>
+      <atom:link href="/author/alexey-tumanov-systems-for-ai-lab-sail/index.xml" rel="self" type="application/rss+xml" />
+    <description>Alexey Tumanov  ||  Systems for AI Lab (SAIL)</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Georgia Tech Systems for Artificial Intelligence Lab</copyright><lastBuildDate>Wed, 28 Apr 2021 20:38:42 -0400</lastBuildDate>
+    <image>
+      <url>/images/logo_hu84f705ae95685b0d34a58e266de4c1a9_63990_300x300_fit_lanczos_2.png</url>
+      <title>Alexey Tumanov  ||  Systems for AI Lab (SAIL)</title>
+      <link>/author/alexey-tumanov-systems-for-ai-lab-sail/</link>
+    </image>
+    
+    <item>
+      <title>CompOFA: Compound Once-For-All Networks for Faster Multi-Platform Deployment</title>
+      <link>/compofa/blog/</link>
+      <pubDate>Wed, 28 Apr 2021 20:38:42 -0400</pubDate>
+      <guid>/compofa/blog/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;If you’ve trained deep learning models, you know the process can take hours or days (weeks?) and thousands of dollars’ worth of computation. With increasing use of DNNs in common production, this problem only gets bigger – they need to be used on diverse deployment targets with widely varying latency constraints, based on hardware capabilities and application requirements. Designing DNN architectures that maximize accuracy under these constraints adds another degree of complexity requiring manual expertise and/or neural architecture search (NAS) – which are even slower and costlier than training. Clearly, repeating these processes for every deployment target is not scalable and therefore, solving this problem is essential for making DNNs easier to use in real deployment.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;./img/model-family.png&#34; &gt;
+
+
+  &lt;img src=&#34;./img/model-family.png&#34; alt=&#34;&#34; width=&#34;20%&#34; &gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;In &lt;em&gt;CompOFA&lt;/em&gt;, we propose a cost-effective and faster technique to build model families that support multiple deployment platforms. Using insights from model design and system deployment, we build upon the current best methods that take 40-50 GPU days of computation and make their training and searching processes &lt;strong&gt;faster by 2x and 200x&lt;/strong&gt;, respectively – all while building a family of equally efficient and diverse models!&lt;/p&gt;
+&lt;h1 id=&#34;how-its-done-today&#34;&gt;How it’s done today&lt;/h1&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-conventional-individual-training&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;./img/naive-training.png&#34; data-caption=&#34;Conventional, individual training&#34;&gt;
+
+
+  &lt;img src=&#34;./img/naive-training.png&#34; alt=&#34;&#34; width=&#34;60%&#34; &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Conventional, individual training
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;The prevailing norm today is to build individual neural networks. We design and train single monolithic DNNs with a fixed accuracy and latency measure (or computational complexity, energy usage, etc.). Both, designing efficient architectures and training on production-grade datasets, require computation worth several GPU hours with slow turnaround, expensive hardwares and expertise in ML and Systems. In 2019, a study estimated the carbon emissions of one well-known NAS technique to be 283 metric tons – or nearly 60 times the emissions over an average human lifetime! Thus it is simply unscalable to continue this trend of designing and training individual DNNs for deployment.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-once-for-all-ofa-co-trained-model-families&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;./img/ofa.png&#34; data-caption=&#34;Once-For-All (OFA): co-trained model families&#34;&gt;
+
+
+  &lt;img src=&#34;./img/ofa.png&#34; alt=&#34;&#34; width=&#34;80%&#34; &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Once-For-All (OFA): co-trained model families
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;em&gt;Once-For-All (OFA)&lt;/em&gt; proposed to address this problem via weight-shared sub-networks of a larger network. These sub-networks of varying sizes had diverse accuracy and latency measures and could be trained simultaneously (rather than one-by-one). Post this one-time training, one can independently search and extract a subnetwork with optimal accuracy for a given deployment. Hence, OFA significantly improved the scalability over the naïve method. But, at 40-50 GPU days of train time, OFA remained expensive and required special training &amp;amp; searching procedures for its huge search space of $10^{19}$ models.&lt;/p&gt;
+&lt;p&gt;In &lt;em&gt;CompOFA&lt;/em&gt;, we find insights that speed up OFA’s training and searching methodologies, while making it easier to use.&lt;/p&gt;
+&lt;h1 id=&#34;compofa&#34;&gt;CompOFA&lt;/h1&gt;
+&lt;p&gt;OFA built a model search space by slicing smaller subnetworks from a larger network – by choosing subsets of its layers (depth), channels (width), resolution, etc. This choice was made independently at each layer, contributing to a combinatorial explosion of $10^{10}-10^{19}$ models! These models don’t come free – training so many of them together needs a slow, phased approach. After training, the search also requires building special accuracy and latency estimators.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;But do we need such a large search space?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Are all these models efficient? No!&lt;/strong&gt; Many of these subnetworks are of dimensions that are suboptimal, lying well below the optimal accuracy-latency tradeoff.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Are all these models different enough? No!&lt;/strong&gt; Imagine $10^{19}$ networks where the smallest and largest differ in latency by just 100ms – this fine granularity is too small to matter for real hardware.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In CompOFA, we question whether we can identify and focus our attention just on models that are close to optimal, and at a sufficient granularity?  After all, it’s not common practice to treat these model dimensions as independent or random –- we often combine dimensions like depth and width to vary together i.e. in a compound fashion. This common intuition is backed by empirical studies like &lt;a href=&#34;https://arxiv.org/abs/1905.11946&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;EfficientNet&lt;/a&gt; and &lt;a href=&#34;https://arxiv.org/abs/2003.13678&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RegNet&lt;/a&gt;, which showed that there are optimal relations between these dimensions.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-compofa-reduces-combinatorial-explosion-of-the-search-space-by-exploiting-the-same-direction-of-growth-of-accuracy-and-latency&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;./img/dw-grid.png&#34; data-caption=&#34;CompOFA reduces combinatorial explosion of the search space by exploiting the same direction of growth of accuracy and latency.&#34;&gt;
+
+
+  &lt;img src=&#34;./img/dw-grid.png&#34; alt=&#34;&#34; width=&#34;40%&#34; &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    CompOFA reduces combinatorial explosion of the search space by exploiting the same direction of growth of accuracy and latency.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Inspired by this, CompOFA uses a simple but powerful heuristic – &lt;strong&gt;choose models that grow depth and width together&lt;/strong&gt;. This makes our search space much more tractable, but still just as efficient and diverse for actual use.&lt;/p&gt;
+&lt;p&gt;In our paper, we show that we can train this model family in &lt;strong&gt;half the time&lt;/strong&gt; and all at once, without a slow phased approach. After training, we can search for models &lt;strong&gt;216x&lt;/strong&gt; faster, and without the time and effort to build special estimators.&lt;/p&gt;
+&lt;center&gt;
+&lt;!-- | **Metric**               |   **OFA** | **CompOFA** |  **Savings** |
+|--------------------------|----------:|------------:|-------------:|
+| **Train Time** (GPU hrs) |     978.3 |       493.5 |       **2x** |
+| **Train Cost** (USD)     |     $2.4k |       $1.2k |       **2x** |
+| **CO2 emissions** (lbs)  |       277 |         128 |       **2x** |
+| **Search Time**          | 4.5 hours |  75 seconds |     **216x** | --&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;./img/table.png&#34; &gt;
+
+
+  &lt;img src=&#34;./img/table.png&#34; alt=&#34;&#34; width=&#34;40%&#34; &gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+&lt;/center&gt;
+&lt;p&gt;Despite these savings, CompOFA does not compromise on its original goal. It’s able to extract networks for multiple latency targets on distinct hardware types, and match the existing SOTA in both optimality and range of its models.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-compofa-generates-efficient-model-families-for-diverse-hardwares----from-mobile-phones-to-gpus&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;./img/pareto-results.png&#34; data-caption=&#34;CompOFA generates efficient model families for diverse hardwares &amp;amp;ndash; from mobile phones to GPUs&#34;&gt;
+
+
+  &lt;img src=&#34;./img/pareto-results.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    CompOFA generates efficient model families for diverse hardwares &amp;ndash; from mobile phones to GPUs
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;learn-more&#34;&gt;Learn more&lt;/h1&gt;
+&lt;p&gt;CompOFA improves the speed, cost, and usability of jointly training models for many deployment targets. By highlighting insights on model design and system deployment, we try to address an important problem for real-world usability of DNNs.&lt;/p&gt;
+&lt;p&gt;To know more, please check out our &lt;a href=&#34;https://arxiv.org/abs/2104.12642&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt; and &lt;a href=&#34;https://iclr.cc/media/PosterPDFs/ICLR%202021/2c3ddf4bf13852db711dd1901fb517fa.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;poster&lt;/a&gt; at ICLR 2021! Our code and pretrained models are also available on our &lt;a href=&#34;https://github.com/gatech-sysml/compofa&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github repository&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bibtex&#34;&gt;@inproceedings{compofa-iclr21,
+  author    = {Manas Sahni and Shreya Varshini and Alind Khare and
+               Alexey Tumanov},
+  title     = {{C}omp{OFA}: Compound Once-For-All Networks for Faster Multi-Platform Deployment},
+  month     = {May},
+  booktitle = {Proc. of the 9th International Conference on Learning Representations},
+  series = {ICLR &#39;21},
+  year = {2021},
+  url       = {https://openreview.net/forum?id=IgIk8RRT-Z}
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CompOFA: Compound Once-For-All Networks for Faster Multi-Platform Deployment</title>
+      <link>/compofa/</link>
+      <pubDate>Sat, 24 Apr 2021 15:55:22 -0400</pubDate>
+      <guid>/compofa/</guid>
+      <description>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-conventional-training-current-sota-and-compofa&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;./img/overview.png&#34; data-caption=&#34;Conventional training, current SOTA, and CompOFA&#34;&gt;
+
+
+  &lt;img src=&#34;./img/overview.png&#34; alt=&#34;&#34; width=&#34;90%&#34; &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Conventional training, current SOTA, and CompOFA
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;The emergence of CNNs in mainstream deployment has necessitated methods to design and train efficient architectures tailored to maximize the accuracy under diverse hardware &amp;amp; latency constraints.&lt;/p&gt;
+&lt;p&gt;Designing and training DNN architectures for each deployment target is not feasible. Each deployment costs training time, compute dollars, system expertise, ML expertise, CO2 emissions.&lt;/p&gt;
+&lt;p&gt;In &lt;em&gt;CompOFA&lt;/em&gt;, we propose a cost-effective and faster technique to build model families that support multiple deployment platforms. Using insights from model design and system deployment, we build upon the current best methods that take 40-50 GPU days of computation and make their training and searching processes &lt;strong&gt;faster by 2x and 200x&lt;/strong&gt;, respectively – all while building a family of equally efficient and diverse models!&lt;/p&gt;
+&lt;h3 id=&#34;compofa-matches-efficiency-and-diversity-of-sota-methods&#34;&gt;CompOFA matches efficiency and diversity of SOTA methods&amp;hellip;&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-efficient-model-families-for-diverse-hardwares----from-mobile-phones-to-gpus&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;./img/pareto-results.png&#34; data-caption=&#34;Efficient model families for diverse hardwares &amp;amp;ndash; from mobile phones to GPUs&#34;&gt;
+
+
+  &lt;img src=&#34;./img/pareto-results.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Efficient model families for diverse hardwares &amp;ndash; from mobile phones to GPUs
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;with-2x-faster-training-and-216x-faster-searching&#34;&gt;&amp;hellip;with &lt;em&gt;2x&lt;/em&gt; faster training and &lt;em&gt;216x&lt;/em&gt; faster searching&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;./img/table.png&#34; &gt;
+
+
+  &lt;img src=&#34;./img/table.png&#34; alt=&#34;&#34; width=&#34;40%&#34; &gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;better-overall-average-accuracy&#34;&gt;Better overall average accuracy&lt;/h3&gt;
+&lt;p&gt;At a population level, CompOFA has a higher concentration of accurate models&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;./img/avg_accuracy.png&#34; &gt;
+
+
+  &lt;img src=&#34;./img/avg_accuracy.png&#34; alt=&#34;&#34; width=&#34;70%&#34; &gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;learn-more&#34;&gt;Learn more&lt;/h1&gt;
+&lt;p&gt;Please check out our &lt;a href=&#34;https://arxiv.org/abs/2104.12642&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt; and &lt;a href=&#34;https://iclr.cc/media/PosterPDFs/ICLR%202021/2c3ddf4bf13852db711dd1901fb517fa.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;poster&lt;/a&gt; at ICLR 2021! Our code and pretrained models are also available on our &lt;a href=&#34;https://github.com/gatech-sysml/compofa&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github repository&lt;/a&gt;. Also check out our &lt;a href=&#34;/compofa/blog&#34;&gt;blog post&lt;/a&gt;!&lt;/p&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bibtex&#34;&gt;@inproceedings{compofa-iclr21,
+  author    = {Manas Sahni and Shreya Varshini and Alind Khare and
+               Alexey Tumanov},
+  title     = {{C}omp{OFA}: Compound Once-For-All Networks for Faster Multi-Platform Deployment},
+  month     = {May},
+  booktitle = {Proc. of the 9th International Conference on Learning Representations},
+  series = {ICLR &#39;21},
+  year = {2021},
+  url       = {https://openreview.net/forum?id=IgIk8RRT-Z}
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
