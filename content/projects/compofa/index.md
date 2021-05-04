@@ -4,7 +4,11 @@
 title: "CompOFA: Compound Once-For-All Networks for Faster Multi-Platform Deployment"
 subtitle: "At International Conference on Learning Representations (ICLR), 2021"
 summary: "CompOFA improves the speed, cost, and usability of jointly training models for many deployment targets. By highlighting insights on model design and system deployment, we try to address an important problem for real-world usability of DNNs."
-authors: [Manas Sahni, Shreya Varshini, Alind Khare, Alexey Tumanov]
+authors:
+- manas
+- Shreya Varshini
+- Alind Khare
+- alexey
 # tags: []
 # categories: []
 date: 2021-04-24T15:55:22-04:00
