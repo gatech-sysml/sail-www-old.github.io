@@ -1,11 +1,20 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Holmes"
-summary: ""
-authors: []
-tags: []
-categories: []
+title: "HOLMES: Health OnLine Model Ensemble Serving for Deep Learning Models in Intensive Care Units"
+subtitle: "At Knowledge Discovery and Data Mining (KDD), 2020"
+summary: "In many clinical environments such as intensive care unit (ICU), real-time model serving is equally if not more important than accuracy. To make timely decisions, we argue the underlying serving system must be latency-aware. HOLMES is an online model ensemble serving framework for healthcare applications. HOLMES dynamically identifies the best performing set of models to ensemble for highest accuracy, while also satisfying sub-second latency constraints on end-to-end prediction."
+authors: 
+  - Shenda Hong
+  - Yanbo Xu
+  - alind
+  - Satria Priambada
+  - Kevin Maher
+  - Alaa Aljiffry
+  - Jimeng Sun
+  - alexey
+# tags: []
+# categories: []
 date: 2021-05-04T08:55:07-04:00
 
 # Optional external URL for project (replaces project detail page).
