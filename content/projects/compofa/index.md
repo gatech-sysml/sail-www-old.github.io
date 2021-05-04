@@ -17,7 +17,7 @@ date: 2021-04-24T15:55:22-04:00
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
   caption: ""
-  focal_point: "Center"
+  focal_point: ""
   preview_only: false
 
 # Custom links (optional).
@@ -43,14 +43,9 @@ links:
   icon: film
 
 - name: Blog
-  url: "compofa/blog"
+  url: "/post/compofa"
   icon_pack: fas
   icon: newspaper
-
-#- name: Video
-#  url: "https://youtube.com/"
-#  icon_pack: fas
-#  icon: film
 
 # Slides (optional).
 #   Associate this project with Markdown slides.

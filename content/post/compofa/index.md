@@ -1,17 +1,16 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "CompOFA: Compound Once-For-All Networks for Faster Multi-Platform Deployment"
+title: "Introducing CompOFA"
 subtitle: "At International Conference on Learning Representations (ICLR), 2021"
 summary: "CompOFA improves the speed, cost, and usability of jointly training models for many deployment targets. By highlighting insights on model design and system deployment, we try to address an important problem for real-world usability of DNNs."
-authors: [Manas Sahni, Shreya Varshini, Alind Khare, Alexey Tumanov  ||  Systems for AI Lab (SAIL), Georgia Institute of Technology]
+authors: [Manas Sahni, Shreya Varshini, Alind Khare, Alexey Tumanov]
 tags: []
 categories: []
 date: 2021-04-28T20:38:42-04:00
 lastmod: 2021-04-28T20:38:42-04:00
 featured: false
 draft: false
-url: /compofa/blog
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -44,6 +43,11 @@ links:
   url: "https://iclr.cc/media/PosterPDFs/ICLR%202021/2c3ddf4bf13852db711dd1901fb517fa.png"
   icon_pack: fas
   icon: image
+
+- name: Video
+  url: "https://youtu.be/DAi20CfDCfg"
+  icon_pack: fas
+  icon: film
 
 - name: Project Home
   url: /compofa
