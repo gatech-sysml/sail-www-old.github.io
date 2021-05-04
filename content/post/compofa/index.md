@@ -6,7 +6,7 @@ subtitle: "At International Conference on Learning Representations (ICLR), 2021"
 summary: "CompOFA improves the speed, cost, and usability of jointly training models for many deployment targets. By highlighting insights on model design and system deployment, we try to address an important problem for real-world usability of DNNs."
 authors: 
 - manas
-- Shreya Varshini
+- shreya 
 - alind
 - alexey
 tags: []
