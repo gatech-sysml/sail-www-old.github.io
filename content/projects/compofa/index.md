@@ -4,7 +4,7 @@
 title: "CompOFA: Compound Once-For-All Networks for Faster Multi-Platform Deployment"
 subtitle: "At International Conference on Learning Representations (ICLR), 2021"
 summary: "CompOFA improves the speed, cost, and usability of jointly training models for many deployment targets. By highlighting insights on model design and system deployment, we try to address an important problem for real-world usability of DNNs."
-authors: [Manas Sahni, Shreya Varshini, Alind Khare, Alexey Tumanov  ||  Systems for AI Lab (SAIL), Georgia Institute of Technology]
+authors: [Manas Sahni, Shreya Varshini, Alind Khare, Alexey Tumanov]
 # tags: []
 # categories: []
 date: 2021-04-24T15:55:22-04:00
@@ -37,6 +37,11 @@ links:
   icon_pack: fas
   icon: image
 
+- name: Video
+  url: "https://youtu.be/DAi20CfDCfg"
+  icon_pack: fas
+  icon: film
+
 - name: Blog
   url: "compofa/blog"
   icon_pack: fas
@@ -57,7 +62,7 @@ slides: ""
 commentable: false
 ---
 
-{{<figure src="./img/overview.png" width="90%" caption="Conventional training, current SOTA, and CompOFA">}}
+{{<figure src="./img/overview.png" width="100%" caption="Conventional training, current SOTA, and CompOFA">}}
 
 The emergence of CNNs in mainstream deployment has necessitated methods to design and train efficient architectures tailored to maximize the accuracy under diverse hardware & latency constraints.
 
