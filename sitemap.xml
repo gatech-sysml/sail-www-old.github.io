@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/author/alexey-tumanov-systems-for-ai-lab-sail/</loc>
+    <loc>/author/alexey-tumanov/</loc>
     <lastmod>2021-04-28T20:38:42-04:00</lastmod>
   </url><url>
     <loc>/author/alind-khare/</loc>
@@ -11,16 +11,13 @@
     <loc>/authors/</loc>
     <lastmod>2021-04-28T20:38:42-04:00</lastmod>
   </url><url>
-    <loc>/compofa/blog/</loc>
-    <lastmod>2021-04-28T20:38:42-04:00</lastmod>
-  </url><url>
-    <loc>/author/georgia-institute-of-technology/</loc>
-    <lastmod>2021-04-28T20:38:42-04:00</lastmod>
-  </url><url>
-    <loc>/post/</loc>
+    <loc>/post/compofa/</loc>
     <lastmod>2021-04-28T20:38:42-04:00</lastmod>
   </url><url>
     <loc>/author/manas-sahni/</loc>
+    <lastmod>2021-04-28T20:38:42-04:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
     <lastmod>2021-04-28T20:38:42-04:00</lastmod>
   </url><url>
     <loc>/author/shreya-varshini/</loc>
@@ -29,7 +26,10 @@
     <loc>/</loc>
     <lastmod>2021-04-28T20:38:42-04:00</lastmod>
   </url><url>
-    <loc>/compofa/</loc>
+    <loc>/projects/compofa/</loc>
+    <lastmod>2021-04-24T15:55:22-04:00</lastmod>
+  </url><url>
+    <loc>/projects/</loc>
     <lastmod>2021-04-24T15:55:22-04:00</lastmod>
   </url><url>
     <loc>/publication-type/3/</loc>

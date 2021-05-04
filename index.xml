@@ -13,10 +13,10 @@
     </image>
     
     <item>
-      <title>CompOFA: Compound Once-For-All Networks for Faster Multi-Platform Deployment</title>
-      <link>/compofa/blog/</link>
+      <title>Introducing CompOFA</title>
+      <link>/post/compofa/</link>
       <pubDate>Wed, 28 Apr 2021 20:38:42 -0400</pubDate>
-      <guid>/compofa/blog/</guid>
+      <guid>/post/compofa/</guid>
       <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;If you’ve trained deep learning models, you know the process can take hours or days (weeks?) and thousands of dollars’ worth of computation. With increasing use of DNNs in common production, this problem only gets bigger – they need to be used on diverse deployment targets with widely varying latency constraints, based on hardware capabilities and application requirements. Designing DNN architectures that maximize accuracy under these constraints adds another degree of complexity requiring manual expertise and/or neural architecture search (NAS) – which are even slower and costlier than training. Clearly, repeating these processes for every deployment target is not scalable and therefore, solving this problem is essential for making DNNs easier to use in real deployment.&lt;/p&gt;
 
@@ -277,9 +277,9 @@
     
     <item>
       <title>CompOFA: Compound Once-For-All Networks for Faster Multi-Platform Deployment</title>
-      <link>/compofa/</link>
+      <link>/projects/compofa/</link>
       <pubDate>Sat, 24 Apr 2021 15:55:22 -0400</pubDate>
-      <guid>/compofa/</guid>
+      <guid>/projects/compofa/</guid>
       <description>
 
 
@@ -304,7 +304,7 @@
   &lt;a data-fancybox=&#34;&#34; href=&#34;./img/overview.png&#34; data-caption=&#34;Conventional training, current SOTA, and CompOFA&#34;&gt;
 
 
-  &lt;img src=&#34;./img/overview.png&#34; alt=&#34;&#34; width=&#34;90%&#34; &gt;
+  &lt;img src=&#34;./img/overview.png&#34; alt=&#34;&#34; width=&#34;100%&#34; &gt;
 &lt;/a&gt;
 
 
