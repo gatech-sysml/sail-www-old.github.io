@@ -7,7 +7,7 @@ summary: "CompOFA improves the speed, cost, and usability of jointly training mo
 authors: 
 - manas
 - Shreya Varshini
-- Alind Khare
+- alind
 - alexey
 tags: []
 categories: []
