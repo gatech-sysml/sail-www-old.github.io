@@ -5,12 +5,21 @@
     <link>/projects/</link>
       <atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Georgia Tech Systems for Artificial Intelligence Lab</copyright><lastBuildDate>Sat, 24 Apr 2021 15:55:22 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Georgia Tech Systems for Artificial Intelligence Lab</copyright><lastBuildDate>Tue, 04 May 2021 08:55:07 -0400</lastBuildDate>
     <image>
       <url>/images/logo_hu593886a39899d4c673c949ed243a190d_66707_300x300_fit_lanczos_2.png</url>
       <title>Projects</title>
       <link>/projects/</link>
     </image>
+    
+    <item>
+      <title>Holmes</title>
+      <link>/projects/holmes/</link>
+      <pubDate>Tue, 04 May 2021 08:55:07 -0400</pubDate>
+      <guid>/projects/holmes/</guid>
+      <description>&lt;p&gt;hello&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>CompOFA: Compound Once-For-All Networks for Faster Multi-Platform Deployment</title>

@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/projects/holmes/</loc>
+    <lastmod>2021-05-04T08:55:07-04:00</lastmod>
+  </url><url>
+    <loc>/projects/</loc>
+    <lastmod>2021-05-04T08:55:07-04:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2021-05-04T08:55:07-04:00</lastmod>
+  </url><url>
     <loc>/author/alexey-tumanov/</loc>
     <lastmod>2021-04-28T20:38:42-04:00</lastmod>
   </url><url>
@@ -23,22 +32,19 @@
     <loc>/author/shreya-varshini/</loc>
     <lastmod>2021-04-28T20:38:42-04:00</lastmod>
   </url><url>
-    <loc>/</loc>
-    <lastmod>2021-04-28T20:38:42-04:00</lastmod>
-  </url><url>
     <loc>/projects/compofa/</loc>
     <lastmod>2021-04-24T15:55:22-04:00</lastmod>
   </url><url>
-    <loc>/projects/</loc>
+    <loc>/author/manas-sahni/</loc>
     <lastmod>2021-04-24T15:55:22-04:00</lastmod>
   </url><url>
     <loc>/publication-type/3/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication/preprint/</loc>
+    <loc>/author/admin/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/author/nelson-bighetti/</loc>
+    <loc>/publication/preprint/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/publication_types/</loc>
@@ -76,6 +82,6 @@
   </url><url>
     <loc>/categories/</loc>
   </url><url>
-    <loc>/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
+    <loc>/author/nelson-bighetti/</loc>
   </url>
 </urlset>
