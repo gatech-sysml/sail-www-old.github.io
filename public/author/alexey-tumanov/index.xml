@@ -5,12 +5,21 @@
     <link>/author/alexey-tumanov/</link>
       <atom:link href="/author/alexey-tumanov/index.xml" rel="self" type="application/rss+xml" />
     <description>Alexey Tumanov</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Georgia Tech Systems for Artificial Intelligence Lab</copyright><lastBuildDate>Wed, 28 Apr 2021 20:38:42 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Georgia Tech Systems for Artificial Intelligence Lab</copyright><lastBuildDate>Tue, 04 May 2021 08:55:07 -0400</lastBuildDate>
     <image>
       <url>/author/alexey-tumanov/avatar_hu3c0fcaed37fd7775718fba5e61882cd6_20493_270x270_fill_q75_lanczos_center.jpg</url>
       <title>Alexey Tumanov</title>
       <link>/author/alexey-tumanov/</link>
     </image>
+    
+    <item>
+      <title>HOLMES: Health OnLine Model Ensemble Serving for Deep Learning Models in Intensive Care Units</title>
+      <link>/projects/holmes/</link>
+      <pubDate>Tue, 04 May 2021 08:55:07 -0400</pubDate>
+      <guid>/projects/holmes/</guid>
+      <description>&lt;p&gt;hello&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Introducing CompOFA</title>
