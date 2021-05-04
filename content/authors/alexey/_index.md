@@ -64,7 +64,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Researchers
+- Principal Investigators
 ---
 
 Alexey Tumanov is a tenure-track Assistant Professor of Computer Science at Georgia TEch since August 2019. His research interests include Systems for Machine Learning, specifically soft real-time ML support, resource management for distributed ML, distributed inference, distributed dataframe analytics, and latency-aware Neural Architecture Search (NAS). Prof. Tumanov completed his postdoc at the University of California, Berkeley with Ion Stoica and in close collaboration with several other co-directors of RISELab, including Joseph Gonzalez and Joe Hellerstein. During his PhD studies at Carnegie Mellon, Alexey focused on the development of the first declarative, heterogeneity-aware scheduling framework capable of capturing a large class of combinatorial constraints and preferences on resource space-time.

@@ -17,4 +17,4 @@ advanced:
   css_class:
 ---
 
-Example text
+Example text Example textExample text

@@ -5,12 +5,21 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Systems for AI Lab</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Georgia Tech Systems for Artificial Intelligence Lab</copyright><lastBuildDate>Wed, 28 Apr 2021 20:38:42 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Georgia Tech Systems for Artificial Intelligence Lab</copyright><lastBuildDate>Tue, 04 May 2021 08:55:07 -0400</lastBuildDate>
     <image>
       <url>/images/logo_hu593886a39899d4c673c949ed243a190d_66707_300x300_fit_lanczos_2.png</url>
       <title>Systems for AI Lab</title>
       <link>/</link>
     </image>
+    
+    <item>
+      <title>Holmes</title>
+      <link>/projects/holmes/</link>
+      <pubDate>Tue, 04 May 2021 08:55:07 -0400</pubDate>
+      <guid>/projects/holmes/</guid>
+      <description>&lt;p&gt;hello&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Introducing CompOFA</title>

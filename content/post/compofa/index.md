@@ -4,7 +4,11 @@
 title: "Introducing CompOFA"
 subtitle: "At International Conference on Learning Representations (ICLR), 2021"
 summary: "CompOFA improves the speed, cost, and usability of jointly training models for many deployment targets. By highlighting insights on model design and system deployment, we try to address an important problem for real-world usability of DNNs."
-authors: [Manas Sahni, Shreya Varshini, Alind Khare, Alexey Tumanov]
+authors: 
+- manas
+- Shreya Varshini
+- Alind Khare
+- Alexey Tumanov
 tags: []
 categories: []
 date: 2021-04-28T20:38:42-04:00
@@ -25,7 +29,7 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects: ["../../compofa"]
+projects: ["/projects/compofa"]
 
 # Custom links (optional).
 links:
@@ -50,7 +54,7 @@ links:
   icon: film
 
 - name: Project Home
-  url: /compofa
+  url: /projects/compofa
   icon_pack: fas
   icon: home
 
