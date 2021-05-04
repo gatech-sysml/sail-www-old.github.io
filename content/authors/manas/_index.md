@@ -68,4 +68,4 @@ user_groups:
 - MS Students
 ---
 
-I’m a 2nd year MS CS student at Georgia Tech. At SAIL, I'm working on efficient neural architecture search and democratizing machine learning through better frameworks, tools, and algorithms.
+I’m a 2nd year MS CS student at Georgia Tech. At SAIL, I'm working on efficient neural architecture search, and democratizing machine learning through better frameworks, tools, and algorithms.
