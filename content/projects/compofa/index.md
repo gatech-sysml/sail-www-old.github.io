@@ -18,7 +18,7 @@ date: 2021-04-24T15:55:22-04:00
 image:
   caption: ""
   focal_point: ""
-  preview_only: false
+  preview_only: true
 
 # Custom links (optional).
 links:
@@ -56,6 +56,8 @@ slides: ""
 
 commentable: false
 ---
+
+{{<figure src="./img/overview.png" width="100%" caption="Conventional training, current SOTA, and CompOFA">}}
 
 The emergence of CNNs in mainstream deployment has necessitated methods to design and train efficient architectures tailored to maximize the accuracy under diverse hardware & latency constraints.
 

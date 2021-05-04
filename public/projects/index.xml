@@ -26,7 +26,44 @@
       <link>/projects/compofa/</link>
       <pubDate>Sat, 24 Apr 2021 15:55:22 -0400</pubDate>
       <guid>/projects/compofa/</guid>
-      <description>&lt;p&gt;The emergence of CNNs in mainstream deployment has necessitated methods to design and train efficient architectures tailored to maximize the accuracy under diverse hardware &amp;amp; latency constraints.&lt;/p&gt;
+      <description>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-conventional-training-current-sota-and-compofa&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;./img/overview.png&#34; data-caption=&#34;Conventional training, current SOTA, and CompOFA&#34;&gt;
+
+
+  &lt;img src=&#34;./img/overview.png&#34; alt=&#34;&#34; width=&#34;100%&#34; &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Conventional training, current SOTA, and CompOFA
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;The emergence of CNNs in mainstream deployment has necessitated methods to design and train efficient architectures tailored to maximize the accuracy under diverse hardware &amp;amp; latency constraints.&lt;/p&gt;
 &lt;p&gt;Designing and training DNN architectures for each deployment target is not feasible. Each deployment costs training time, compute dollars, system expertise, ML expertise, CO2 emissions.&lt;/p&gt;
 &lt;p&gt;In &lt;em&gt;CompOFA&lt;/em&gt;, we propose a cost-effective and faster technique to build model families that support multiple deployment platforms. Using insights from model design and system deployment, we build upon the current best methods that take 40-50 GPU days of computation and make their training and searching processes &lt;strong&gt;faster by 2x and 200x&lt;/strong&gt;, respectively – all while building a family of equally efficient and diverse models!&lt;/p&gt;
 &lt;h3 id=&#34;compofa-matches-efficiency-and-diversity-of-sota-methods&#34;&gt;CompOFA matches efficiency and diversity of SOTA methods&amp;hellip;&lt;/h3&gt;
