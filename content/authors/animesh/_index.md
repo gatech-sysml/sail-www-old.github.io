@@ -66,4 +66,4 @@ user_groups:
 - Undergrad Students
 ---
 
-I’m a 4th year BS CS and Mathematics student at Georgia Tech. At SAIL, I'm working on federated learning within healthcare applications with heterogenous computational power and local data.
+I’m a 4th year BS CS and Mathematics student at Georgia Tech. At SAIL, I'm working on federated learning within healthcare applications with heterogeneous computational power and local data.
