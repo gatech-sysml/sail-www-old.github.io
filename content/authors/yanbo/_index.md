@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Alind Khare
+title: Yanbo Xu
 
 # Is this the primary user of the site?
 superuser: false
