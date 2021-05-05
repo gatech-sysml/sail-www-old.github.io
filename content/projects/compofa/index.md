@@ -26,6 +26,11 @@ image:
 
 # Custom links (optional).
 links:
+- name: ICLR 2021
+  url: "https://iclr.cc/virtual/2021/poster/3296"
+  icon_pack: fas
+  icon: globe
+
 - name: ArXiv
   url: "https://arxiv.org/abs/2104.12642"
   icon_pack: ai
