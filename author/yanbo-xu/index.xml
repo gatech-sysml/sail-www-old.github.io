@@ -5,21 +5,12 @@
     <link>/author/yanbo-xu/</link>
       <atom:link href="/author/yanbo-xu/index.xml" rel="self" type="application/rss+xml" />
     <description>Yanbo Xu</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Georgia Tech Systems for Artificial Intelligence Lab</copyright><lastBuildDate>Tue, 04 May 2021 08:55:07 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Georgia Tech Systems for Artificial Intelligence Lab</copyright>
     <image>
-      <url>/images/logo_hu593886a39899d4c673c949ed243a190d_66707_300x300_fit_lanczos_2.png</url>
+      <url>/author/yanbo-xu/avatar_huf7187b56f305b736b6c1debbcc1f0c24_243588_270x270_fill_q75_lanczos_center.jpg</url>
       <title>Yanbo Xu</title>
       <link>/author/yanbo-xu/</link>
     </image>
-    
-    <item>
-      <title>HOLMES: Health OnLine Model Ensemble Serving for Deep Learning Models in Intensive Care Units</title>
-      <link>/projects/holmes/</link>
-      <pubDate>Tue, 04 May 2021 08:55:07 -0400</pubDate>
-      <guid>/projects/holmes/</guid>
-      <description>&lt;p&gt;hello&lt;/p&gt;
-</description>
-    </item>
     
   </channel>
 </rss>

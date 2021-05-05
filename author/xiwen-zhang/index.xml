@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xiwen Zhang | Systems for AI Lab</title>
+    <link>/author/xiwen-zhang/</link>
+      <atom:link href="/author/xiwen-zhang/index.xml" rel="self" type="application/rss+xml" />
+    <description>Xiwen Zhang</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Georgia Tech Systems for Artificial Intelligence Lab</copyright>
+    <image>
+      <url>/author/xiwen-zhang/avatar_hu839cdbb8f8a5ad2b4ec319e44a3f64b5_171316_270x270_fill_q75_lanczos_center.jpg</url>
+      <title>Xiwen Zhang</title>
+      <link>/author/xiwen-zhang/</link>
+    </image>
+    
+  </channel>
+</rss>
